@@ -3,22 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galería Familiar</title>
+    <title>Historial Clínico</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Galería Familiar</h1>
-    </header>
-    
-    <main>
-        <div class="gallery" id="gallery">
-            <!-- Las imágenes se añadirán aquí dinámicamente -->
-        </div>
-        <input type="file" id="fileInput" accept="image/*" multiple>
-        <button onclick="uploadImages()">Subir Imágenes</button>
-    </main>
 
-    <script src="script.js"></script>
+<div class="container">
+    <h2>Historial Clínico</h2>
+
+    <!-- 📌 Sección de Historial Clínico -->
+    <div class="section">
+        <h3>Historial Médico</h3>
+        <div id="history">
+            <!-- 📌 Aquí se mostrarán las capturas de datos -->
+        </div>
+    </div>
+
+    <!-- 📌 Sección para Subir Archivos PDF -->
+    <div class="section">
+        <h3>Subir Archivos Médicos (PDF)</h3>
+        <input type="file" id="fileInput" accept=".pdf">
+        <button onclick="subirArchivo()">Subir Archivo</button>
+        <div id="fileList" class="file-list"></div>
+    </div>
+
+    <!-- 📌 Sección para Consultas -->
+    <div class="section">
+        <h3>Realizar Consulta</h3>
+        <label for="consulta">Escribe tu consulta:</label>
+        <textarea id="consulta" rows="3" placeholder="Describe tu síntoma o pregunta médica"></textarea>
+        <button onclick="realizarConsulta()">Enviar Consulta</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
